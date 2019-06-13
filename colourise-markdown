@@ -15,7 +15,15 @@ WHITE="${ESC}[37m"
 
 H1=${RED}
 H2=${GREEN}
+H3=${YELLOW}
+H4=${BLUE}
+H5=${MAGENTA}
+H6=${CYAN}
 
 sed -E "s/^(# .*)/${H1}\1${RESET}/" \
-| sed -E "s/^(## .*)/${H2}\1${RESET}/"
+| sed -E "s/^(## .*)/${H2}\1${RESET}/" \
+| sed -E "s/^(### .*)/${H3}\1${RESET}/" \
+| sed -E "s/^(#### .*)/${H4}\1${RESET}/" \
+| sed -E "s/^(##### .*)/${H5}\1${RESET}/" \
+| sed -E "s/^(###### .*)/${H6}\1${RESET}/"
 
