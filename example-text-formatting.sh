@@ -28,6 +28,8 @@ MAGENTA_BG="${ESC}[45m"
 CYAN_BG="${ESC}[46m"
 WHITE_BG="${ESC}[47m"
 
+GREEN_BG_BLACK_FG="${ESC}[42;30m"
+
 TEXT="
 No formatting line
 
@@ -54,6 +56,13 @@ ${BLUE_BG}Blue background${RESET}
 ${MAGENTA_BG}Magenta background${RESET}
 ${CYAN_BG}Cyan background${RESET}
 ${WHITE_BG}White background${RESET}
+
+${GREEN_BG_BLACK_FG}
+\`\`\`
+def print_line(string)
+  puts(string)
+end
+\`\`\`${RESET}
 "
 
 echo -e "$TEXT"
